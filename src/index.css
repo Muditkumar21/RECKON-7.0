@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Match Page 2 bg to hide pin-spacer gaps */
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+
+@font-face {
+    font-family: "PixelifySans";
+    src: url("./assets/fonts/PixelifySans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PixelifySans";
+    src: url("./assets/fonts/PixelifySans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PixelifySans";
+    src: url("./assets/fonts/PixelifySans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PixelifySans";
+    src: url("./assets/fonts/PixelifySans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Minecraft";
+    src: url("./assets/fonts/Minecraft.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@theme {
+  --font-pixel: "PixelifySans", sans-serif;
+  --font-minecraft: "Minecraft", sans-serif;
+  --animate-cursor-blink: cursor-blink 1s step-end infinite;
+  
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}

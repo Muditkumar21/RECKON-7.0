@@ -63,7 +63,7 @@ const teamData = [
     { name: "HIMANSHU BHANDARI", role: "MEDIA & DESIGN", image: himanshuImg },
     { name: "KAVYA KHATRI", role: "MEDIA & DESIGN", image: kavyaImg },
     { name: "NIKSHAY SONI", role: "MEDIA & DESIGN", image: nikshayImg },
-    { name: "KARTIKEY GOYEL", role: "MEDIA & DESIGN", image: kartikeyImg },
+    { name: "KARTIKEYA GOYAL", role: "MEDIA & DESIGN", image: kartikeyImg },
 ]
 
 

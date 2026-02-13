@@ -12,9 +12,12 @@ import {
     FaCube,
     FaArrowRight,
     FaBullhorn,
-    FaHandshake
+    FaHandshake,
+    FaLightbulb
 } from 'react-icons/fa'
 import roadmapBg from '../assets/roadmap_bg_opt.png'
+import sponsorBrochure from '../assets/PDFS/Reckon 7.0 Sponsorship Brochure - Change is here (1).pdf'
+import ambassadorBrochure from '../assets/PDFS/Student B.pdf'
 
 // Problem Statement Categories data
 const problemCategories = [
@@ -27,12 +30,29 @@ const problemCategories = [
     { title: "Sustainability", desc: "E-waste management and sustainable tech solutions", icon: FaLeaf },
     { title: "Healthcare & MedCare", desc: "Innovative medical and healthcare technology", icon: FaHeartbeat },
     { title: "Web3 & Blockchain", desc: "Decentralized systems and blockchain technology solutions", icon: FaCube },
+    { title: "Student Innovation", desc: "Empowering student-led innovations", icon: FaLightbulb },
 ]
 
-// Sponsor logos (placeholder)
+// Sponsor Images (Local)
+import sponsor1 from '../assets/sponsors/Gemini_Generated_Image_8jre9h8jre9h8jre-Photoroom.png'
+import sponsor2 from '../assets/sponsors/Gemini_Generated_Image_8yxg048yxg048yxg-Photoroom.png'
+import sponsor3 from '../assets/sponsors/Gemini_Generated_Image_apnic2apnic2apni-Photoroom.png'
+import sponsor4 from '../assets/sponsors/Gemini_Generated_Image_ek7yagek7yagek7y-Photoroom.png'
+import sponsor5 from '../assets/sponsors/Gemini_Generated_Image_ia9tp2ia9tp2ia9t-Photoroom.png'
+import sponsor6 from '../assets/sponsors/Gemini_Generated_Image_rns47qrns47qrns4-Photoroom.png'
+import sponsor7 from '../assets/sponsors/Gemini_Generated_Image_swyhjvswyhjvswyh-Photoroom.png'
+import sponsor8 from '../assets/sponsors/Gemini_Generated_Image_wtzf4bwtzf4bwtzf-Photoroom.png'
+
+// Sponsor logos
 const sponsors = [
-    "Sponsor 1", "Sponsor 2", "Sponsor 3", "Sponsor 4", "Sponsor 5",
-    "Sponsor 6", "Sponsor 7", "Sponsor 8", "Sponsor 9", "Sponsor 10"
+    { name: "Sponsor 1", logo: sponsor1 },
+    { name: "Sponsor 2", logo: sponsor2 },
+    { name: "Sponsor 3", logo: sponsor3 },
+    { name: "Sponsor 4", logo: sponsor4 },
+    { name: "Sponsor 5", logo: sponsor5 },
+    { name: "Sponsor 6", logo: sponsor6 },
+    { name: "Sponsor 7", logo: sponsor7 },
+    { name: "Sponsor 8", logo: sponsor8 },
 ]
 
 // CTA data
@@ -46,13 +66,19 @@ const ctaData = [
     {
         title: "BECOME AN",
         subtitle: "AMBASSADOR",
-        buttons: [{ text: "Apply Now", primary: true }],
+        buttons: [
+            { text: "Apply Now", primary: true, link: "https://forms.gle/rDXHpHuCEzivgx416" },
+            { text: "Download Brochure", primary: false, link: ambassadorBrochure }
+        ],
         icon: FaBullhorn
     },
     {
         title: "BECOME A",
         subtitle: "SPONSOR",
-        buttons: [{ text: "Sponsor Us", primary: true, link: "https://docs.google.com/forms/d/e/1FAIpQLSe9coLSh-O-JubmbYTKS-fjVdeZzUcvPc5uDHDs-Awq10mIHg/viewform" }],
+        buttons: [
+            { text: "Sponsor Us", primary: true, link: "https://forms.gle/wsMm8N6J3V8A4htn6" },
+            { text: "Download Brochure", primary: false, link: sponsorBrochure }
+        ],
         icon: FaHandshake
     }
 ]
@@ -68,7 +94,7 @@ export default function Page7() {
             const animation = gsap.to(marquee, {
                 xPercent: -50,
                 ease: "none",
-                duration: 20,
+                duration: 40, // Slower for better readability
                 repeat: -1,
             })
 
@@ -141,9 +167,9 @@ export default function Page7() {
             </div>
 
             {/* SECTION 2: Sponsors */}
-            <div className="bg-[#0A0A0A] py-12 md:py-16 overflow-hidden relative border-y-8 border-[#dcbd02]">
+            <div className="bg-[#0A0A0A] py-8 md:py-12 overflow-hidden relative">
                 {/* Section Title */}
-                <h2 className="text-4xl md:text-6xl font-black text-[#dcbd02] text-center mb-10 tracking-tight uppercase">
+                <h2 className="text-2xl md:text-4xl font-black text-[#dcbd02] text-center mb-8 tracking-tight uppercase">
                     SPONSORS
                 </h2>
 
@@ -151,22 +177,29 @@ export default function Page7() {
                 <div className="relative overflow-hidden w-full">
                     <div
                         ref={marqueeRef}
-                        className="flex items-center gap-8 md:gap-12"
+                        className="flex items-center gap-8 md:gap-14"
                         style={{ width: 'fit-content' }}
                     >
                         {/* Duplicate sponsors for seamless loop */}
-                        {[...sponsors, ...sponsors, ...sponsors, ...sponsors].map((sponsor, index) => (
+                        {[...sponsors, ...sponsors].map((sponsor, index) => (
                             <div
                                 key={index}
-                                className="shrink-0 bg-[#dcbd02] border-4 border-[#dcbd02] px-8 py-4 min-w-[150px] md:min-w-[200px] text-center
-                                    md:min-h-[80px] flex items-center justify-center
-                                    shadow-[6px_6px_0px_0px_#ffffff]
-                                    hover:translate-y-1 transition-transform cursor-pointer"
-                                style={{
-                                    clipPath: 'polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)'
-                                }}
+                                className="shrink-0 px-4 py-2 min-w-[180px] md:min-w-[240px] text-center
+                                    md:min-h-[120px] flex items-center justify-center
+                                    transition-transform cursor-pointer overflow-hidden"
                             >
-                                <span className="text-[#0A0A0A] text-lg font-black uppercase">{sponsor}</span>
+                                {sponsor.logo ? (
+                                    <img
+                                        src={sponsor.logo}
+                                        alt={sponsor.name}
+                                        className="max-h-[90px] md:max-h-[110px] max-w-[180px] md:max-w-[220px] object-contain transition-all duration-300"
+                                        style={{
+                                            imageRendering: 'pixelated'
+                                        }}
+                                    />
+                                ) : (
+                                    <span className="text-[#dcbd02] text-xl font-black uppercase">{sponsor.name}</span>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -221,22 +254,22 @@ export default function Page7() {
                                     </div>
 
                                     {/* Buttons */}
-                                    <div className="mt-auto">
+                                    <div className="mt-auto w-full flex flex-col gap-3">
                                         {cta.buttons.map((btn, btnIndex) => (
                                             <button
                                                 key={btnIndex}
                                                 onClick={() => btn.link && window.open(btn.link, '_blank')}
-                                                className={`w-full py-4 px-6 text-center
-                                                    font-black uppercase text-lg tracking-wider
+                                                className={`w-full text-center
+                                                    font-black uppercase tracking-wider
                                                     transition-all duration-200
                                                     ${btn.primary
-                                                        ? 'bg-[#dcbd02] text-[#0A0A0A] hover:bg-white'
-                                                        : 'bg-transparent text-[#dcbd02] hover:bg-[#dcbd02] hover:text-[#0A0A0A]'
+                                                        ? 'py-3 px-6 text-lg bg-[#dcbd02] text-[#0A0A0A] hover:bg-white shadow-[4px_4px_0px_rgba(255,255,255,0.2)]'
+                                                        : 'py-2 text-sm md:text-base bg-transparent text-[#dcbd02] hover:text-white hover:underline underline-offset-4'
                                                     }
                                                     `}
-                                                style={{
+                                                style={btn.primary ? {
                                                     clipPath: 'polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)'
-                                                }}
+                                                } : {}}
                                             >
                                                 {btn.text}
                                             </button>

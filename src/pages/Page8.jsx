@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
 import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 // Team member images (optimized)
@@ -20,14 +19,15 @@ import dimpleImg from '../assets/team-optimized/dimple.jpg'
 import divyanshImg from '../assets/team-optimized/divyansh_vyas_pr.jpg'
 import rajImg from '../assets/team-optimized/Raj Singh Rajpurohit.jpg'
 import keshavImg from '../assets/team-optimized/keshav gaur.JPEG.jpg'
-import shrutiImg from '../assets/team-optimized/shruti.JPG.jpg'
 import namitImg from '../assets/team-optimized/namitmathur.jpg'
 import muditImg from '../assets/team-optimized/mudit.jpg'
 import arpitImg from '../assets/team-optimized/arpit.jpg'
 import nishantImg from '../assets/team-optimized/Nishant Rankawat.jpg'
 import bhavyaImg from '../assets/team-optimized/bhavya.jpg'
+import namanImg from '../assets/team-optimized/Naman - PR lead.jpeg'
+import aarshdeepImg from '../assets/team-optimized/AarshdeepKaur.jpeg'
+import muskaanImg from '../assets/team-optimized/Muskaanlatta.jpeg'
 
-// Team Data with names, roles, and images (arranged by hierarchy)
 const teamData = [
     // Co-Lead
     { name: "HEENAL KAWAR RATHORE", role: "CO-LEAD DSC-JU", image: heenalImg },
@@ -35,7 +35,7 @@ const teamData = [
     // All Leads (Technical, Management, PR, Media & Design)
     { name: "NAMIT MATHUR", role: "LEAD TECHNICAL", image: namitImg },
     { name: "LAKSHIT PAREEK", role: "LEAD MANAGEMENT", image: lakshitImg },
-    { name: "PUNEET GOUR", role: "LEAD PR", image: puneetImg },
+    { name: "NAMAN", role: "PR LEAD", image: namanImg },
     { name: "HARSHIT KACCHWAHA", role: "LEAD MEDIA & DESIGN", image: harshitImg },
 
     // All Co-Leads (Technical, Management, PR, Media & Design)
@@ -52,12 +52,14 @@ const teamData = [
     // Management Team
     { name: "HARRY GEHLOT", role: "MANAGEMENT", image: harryImg },
     { name: "PRAHLAD SINGH", role: "MANAGEMENT", image: prahladImg },
+    { name: "PUNEET GOUR", role: "MANAGEMENT", image: puneetImg },
 
     // PR Team
     { name: "DIVYANSH VYAS", role: "PR", image: divyanshImg },
     { name: "RAJ SINGH RAJPUROHIT", role: "PR", image: rajImg },
     { name: "KESHAV GAUR", role: "PR", image: keshavImg },
-    { name: "SHRUTI SURANA", role: "PR", image: shrutiImg },
+    { name: "AARSHDEEP KAUR", role: "PR", image: aarshdeepImg },
+    { name: "MUSKAAN LATTA", role: "PR", image: muskaanImg },
 
     // Media & Design Team
     { name: "HIMANSHU BHANDARI", role: "MEDIA & DESIGN", image: himanshuImg },

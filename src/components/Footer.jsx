@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaInstagram, FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -14,6 +14,7 @@ export default function Footer() {
         { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },
         { icon: FaTwitter, href: '#', label: 'Twitter' },
         { icon: FaGithub, href: '#', label: 'GitHub' },
+        { icon: FaWhatsapp, href: 'https://chat.whatsapp.com/DgbIQyW66KOEFcvTkLD42X?mode=gi_t', label: 'WhatsApp' },
     ]
 
     return (
@@ -88,6 +89,15 @@ export default function Footer() {
                             >
                                 <FaEnvelope className="text-lg" />
                                 <span className="text-sm">dsc@jietjodhpur.ac.in</span>
+                            </a>
+                            <a
+                                href="https://chat.whatsapp.com/DgbIQyW66KOEFcvTkLD42X?mode=gi_t"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-gray-400 hover:text-[#dcbd02] transition-colors duration-300"
+                            >
+                                <FaWhatsapp className="text-lg" />
+                                <span className="text-sm">Join WhatsApp Group</span>
                             </a>
                             <div className="flex items-start gap-3 text-gray-400">
                                 <FaMapMarkerAlt className="text-lg mt-1" />

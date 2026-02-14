@@ -197,6 +197,7 @@ export default function Page8() {
                                 <img
                                     src={currentMember.image}
                                     alt={currentMember.name}
+                                    loading="lazy"
                                     className="w-full h-full object-cover transition-all duration-500"
                                 />
                                 {/* Split Div */}

@@ -36,6 +36,7 @@ export default function Page5() {
                     <img
                         src={mainImg}
                         alt="Main Event"
+                        loading="lazy"
                         className="w-full max-w-sm mx-auto rounded-lg shadow-[8px_8px_0px_white] border-4 border-white"
                     />
                 </div>

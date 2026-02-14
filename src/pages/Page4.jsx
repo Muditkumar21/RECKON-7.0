@@ -303,6 +303,7 @@ export default function Page4() {
                                 id={`m1-set${setIndex}-img${i}`}
                                 src={imgSrc}
                                 alt={`marquee image ${i + 1}`}
+                                loading="lazy"
                                 className="w-48 h-32 md:w-64 md:h-44 lg:w-72 lg:h-48 xl:w-80 xl:h-56 2xl:w-96 2xl:h-64 object-cover shrink-0"
                             />
                         ))
@@ -369,6 +370,7 @@ export default function Page4() {
                                     id={`m2-set${setIndex}-img${i}`}
                                     src={imageUrl}
                                     alt={`marquee image ${i + 11}`}
+                                    loading="lazy"
                                     className="w-48 h-32 md:w-64 md:h-44 lg:w-72 lg:h-48 xl:w-80 xl:h-56 2xl:w-96 2xl:h-64 object-cover shrink-0"
                                 />
                             )

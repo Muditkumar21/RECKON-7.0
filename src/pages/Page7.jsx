@@ -42,6 +42,7 @@ import sponsor5 from '../assets/sponsors/Gemini_Generated_Image_ia9tp2ia9tp2ia9t
 import sponsor6 from '../assets/sponsors/Gemini_Generated_Image_rns47qrns47qrns4-Photoroom.png'
 import sponsor7 from '../assets/sponsors/Gemini_Generated_Image_swyhjvswyhjvswyh-Photoroom.png'
 import sponsor8 from '../assets/sponsors/Gemini_Generated_Image_wtzf4bwtzf4bwtzf-Photoroom.png'
+import sponsor9 from '../assets/sponsors/Gemini_Generated_Image_uvzq0uuvzq0uuvzq-Photoroom.png'
 
 // Sponsor logos
 const sponsors = [
@@ -53,6 +54,7 @@ const sponsors = [
     { name: "Sponsor 6", logo: sponsor6 },
     { name: "Sponsor 7", logo: sponsor7 },
     { name: "Sponsor 8", logo: sponsor8 },
+    { name: "Sponsor 9", logo: sponsor9 },
 ]
 
 // CTA data
@@ -132,13 +134,14 @@ export default function Page7() {
                             <div
                                 key={index}
                                 onClick={() => window.open('/Problem Statements.html', '_blank')}
-                                className="group relative bg-[#0A0A0A] p-1 
+                                className={`group relative bg-[#0A0A0A] p-1 
                                     border-[6px] border-[#0A0A0A] 
                                     shadow-[6px_6px_0px_0px_rgba(10,10,10,1)] md:shadow-[10px_10px_0px_0px_rgba(10,10,10,1)] 
                                     hover:shadow-[14px_14px_0px_0px_rgba(10,10,10,1)] 
                                     hover:-translate-x-1 hover:-translate-y-1
                                     transition-all duration-200 cursor-pointer
-                                    flex flex-col items-center text-center"
+                                    flex flex-col items-center text-center
+                                    ${index === problemCategories.length - 1 ? 'lg:col-start-2' : ''}`}
                                 style={{
                                     borderRadius: '12px'
                                 }}
@@ -167,12 +170,7 @@ export default function Page7() {
             </div>
 
             {/* SECTION 2: Sponsors */}
-            <div className="bg-[#0A0A0A] py-8 md:py-12 overflow-hidden relative">
-                {/* Section Title */}
-                <h2 className="text-2xl md:text-4xl font-black text-[#dcbd02] text-center mb-8 tracking-tight uppercase">
-                    SPONSORS
-                </h2>
-
+            <div className="bg-[#0A0A0A] py-4 md:py-6 overflow-hidden relative">
                 {/* Marquee Container */}
                 <div className="relative overflow-hidden w-full">
                     <div
@@ -193,6 +191,7 @@ export default function Page7() {
                                         src={sponsor.logo}
                                         alt={sponsor.name}
                                         className="max-h-[90px] md:max-h-[110px] max-w-[180px] md:max-w-[220px] object-contain transition-all duration-300"
+                                        loading="lazy"
                                         style={{
                                             imageRendering: 'pixelated'
                                         }}

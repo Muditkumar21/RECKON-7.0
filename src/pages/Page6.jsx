@@ -245,6 +245,21 @@ const Page6 = () => {
 
                 </div>
 
+                {/* YOUTUBE VIDEO SECTION */}
+                <div className="w-full max-w-4xl mx-auto mt-16 md:mt-24 px-4">
+                    <div className="relative w-full aspect-video border-4 md:border-[6px] border-[#0A0A0A] shadow-[8px_8px_0px_rgba(10,10,10,0.5)] bg-[#0A0A0A]">
+                        <iframe
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/vmiF-qrzi-o"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </div>
+
             </div>
         </div>
     );

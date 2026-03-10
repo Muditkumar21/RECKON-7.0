@@ -4,7 +4,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 // Team member images (optimized)
 import heenalImg from '../assets/team-optimized/heenal.jpg'
-import harshitImg from '../assets/team-optimized/Harshit kachhwaha.JPG.jpg'
+import himeshImg from '../assets/team-optimized/himesh_choudhary.jpg.jpeg'
 import yazdaanImg from '../assets/team-optimized/yazdaan_ahmed.jpg'
 import himanshuImg from '../assets/team-optimized/HIMANSHU BHANDARI.JPG.jpg'
 import kavyaImg from '../assets/team-optimized/kavya_khatri.jpg'
@@ -36,7 +36,7 @@ const teamData = [
     { name: "NAMIT MATHUR", role: "LEAD TECHNICAL", image: namitImg },
     { name: "LAKSHIT PAREEK", role: "LEAD MANAGEMENT", image: lakshitImg },
     { name: "NAMAN", role: "PR LEAD", image: namanImg },
-    { name: "HARSHIT KACCHWAHA", role: "LEAD MEDIA & DESIGN", image: harshitImg },
+    { name: "HIMESH CHOUDHARY", role: "LEAD MEDIA & DESIGN", image: himeshImg },
 
     // All Co-Leads (Technical, Management, PR, Media & Design)
     { name: "MUDIT KUMAR", role: "CO-LEAD TECHNICAL", image: muditImg },

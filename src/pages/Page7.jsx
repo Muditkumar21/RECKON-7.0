@@ -52,7 +52,7 @@ const sponsors = [
     { name: "Sponsor 4", logo: sponsor4 },
     { name: "Sponsor 5", logo: sponsor5 },
     { name: "Sponsor 6", logo: sponsor6 },
-    { name: "Sponsor 7", logo: sponsor7 },
+    { name: "Sponsor 7", logo: sponsor7, link: 'https://beeceptor.com/' },
     { name: "Sponsor 8", logo: sponsor8 },
     { name: "Sponsor 9", logo: sponsor9 },
 ]
@@ -182,6 +182,7 @@ export default function Page7() {
                         {[...sponsors, ...sponsors].map((sponsor, index) => (
                             <div
                                 key={index}
+                                onClick={() => sponsor.link ? window.open(sponsor.link, '_blank') : null}
                                 className="shrink-0 px-4 py-2 min-w-[180px] md:min-w-[240px] text-center
                                     md:min-h-[120px] flex items-center justify-center
                                     transition-transform cursor-pointer overflow-hidden"

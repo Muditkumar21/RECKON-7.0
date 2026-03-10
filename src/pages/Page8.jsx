@@ -27,6 +27,7 @@ import bhavyaImg from '../assets/team-optimized/bhavya.jpg'
 import namanImg from '../assets/team-optimized/Naman - PR lead.jpeg'
 import aarshdeepImg from '../assets/team-optimized/AarshdeepKaur.jpeg'
 import muskaanImg from '../assets/team-optimized/Muskaanlatta.jpeg'
+import nishitImg from '../assets/team-optimized/Nishit Dixit.jpeg'
 
 const teamData = [
     // Co-Lead
@@ -66,6 +67,7 @@ const teamData = [
     { name: "KAVYA KHATRI", role: "MEDIA & DESIGN", image: kavyaImg },
     { name: "NIKSHAY SONI", role: "MEDIA & DESIGN", image: nikshayImg },
     { name: "KARTIKEYA GOYAL", role: "MEDIA & DESIGN", image: kartikeyImg },
+    { name: "NISHIT DIXIT", role: "MEDIA & DESIGN", image: nishitImg },
 ]
 
 

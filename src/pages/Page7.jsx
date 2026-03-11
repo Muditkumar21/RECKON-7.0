@@ -206,6 +206,71 @@ export default function Page7() {
                 </div>
             </div>
 
+            {/* SECTION 2.5: SPECIAL SPONSOR */}
+            <div className="pt-12 pb-6 px-4 md:px-12">
+                <div className="max-w-6xl mx-auto flex flex-col items-center">
+                    {/* Retro Header */}
+                    <div className="mb-10">
+                        <div className="bg-[#0A0A0A] border-4 border-[#0A0A0A] p-2 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)]">
+                            <h2 className="text-3xl md:text-5xl font-black text-[#dcbd02] uppercase tracking-tight leading-none px-6 md:px-10">
+                                SPECIAL SPONSOR
+                            </h2>
+                        </div>
+                    </div>
+
+                    {/* Special Sponsor Logos Card */}
+                    <div
+                        className="group relative bg-[#0A0A0A] p-1 
+                            border-[6px] border-[#0A0A0A] 
+                            shadow-[10px_10px_0px_0px_rgba(10,10,10,1)]
+                            hover:shadow-[14px_14px_0px_0px_rgba(10,10,10,1)] 
+                            hover:-translate-x-1 hover:-translate-y-1
+                            transition-all duration-200
+                            w-full max-w-4xl"
+                        style={{ borderRadius: '12px' }}
+                    >
+                        <div className="w-full h-full border-2 border-[#dcbd02] p-6 md:p-10 flex flex-col md:flex-row items-center justify-around bg-[#0A0A0A] rounded-[8px] gap-8">
+                            {/* Beeceptor */}
+                            <div 
+                                onClick={() => window.open('https://beeceptor.com/', '_blank')}
+                                className="cursor-pointer flex flex-col items-center gap-4 transition-transform hover:scale-105"
+                            >
+                                <img
+                                    src={sponsor7}
+                                    alt="Beeceptor"
+                                    className="max-h-[120px] md:max-h-[150px] w-auto object-contain"
+                                    style={{
+                                        imageRendering: 'pixelated',
+                                        filter: 'drop-shadow(0 0 10px rgba(220, 189, 2, 0.2))'
+                                    }}
+                                />
+                                <span className="text-[#dcbd02] text-xs font-bold uppercase tracking-widest opacity-60">Gold Sponsor</span>
+                            </div>
+
+                            {/* Divider for desktop */}
+                            <div className="hidden md:block w-px h-24 bg-[#dcbd02]/20"></div>
+
+                            {/* Second Sponsor (sponsor9 - Toynik) */}
+                            <div 
+                                onClick={() => window.open('https://toynik.com/', '_blank')}
+                                className="cursor-pointer flex flex-col items-center gap-4 transition-transform hover:scale-105"
+                            >
+                                <img
+                                    src={sponsor9}
+                                    alt="Toynik"
+                                    className="max-h-[120px] md:max-h-[150px] w-auto object-contain"
+                                    style={{
+                                        imageRendering: 'pixelated',
+                                        filter: 'drop-shadow(0 0 10px rgba(220, 189, 2, 0.2))'
+                                    }}
+                                />
+                                <span className="text-[#dcbd02] text-xs font-bold uppercase tracking-widest opacity-60">Global Sponsor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* SECTION 3: CTAs - Horizontal Layout */}
             <div className="py-20 px-4 md:px-12 bg-[#dcbd02]/0">
                 {/* Note: I added /0 transparency or should I remove bg? 
